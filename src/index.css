@@ -8,8 +8,8 @@ html {
   font-family: "Quicksand", sans-serif;
   line-height: 1.5;
 
-  color: #ebe7ef;
-  background: url('./assets/bg.png') no-repeat;
+  color: #d4dbc6;
+background-color: #c9f5cb9c;
   background-position: center;
   background-size: cover;
   background-repeat: repeat;
@@ -76,7 +76,7 @@ main h2 {
 #tab-content {
   padding: 1rem;
   border-radius: 6px;
-  background-color: #2f1d43;
+  background-color: #11df0a;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
