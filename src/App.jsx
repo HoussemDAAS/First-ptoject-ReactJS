@@ -12,7 +12,7 @@ function App() {
     console.log(TabContent);
   }
   return (
-    <div>
+    <>
       <Header />
       <main>
         <section id="core-concepts">
@@ -66,7 +66,7 @@ function App() {
         )}
         {/*/ if you wanna remove : null you can use the and &&*/}
       </main>
-    </div>
+    </>
   );
 }
 
