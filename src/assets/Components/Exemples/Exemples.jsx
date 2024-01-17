@@ -16,47 +16,51 @@ function Exemples() {
   return (
     <>
     <Section id="examples" title={"Exemples"} content={
-        <menu>
-        <TabButton
+      <>  <menu>
+        <TabButton 
+       buttonContainer="li"
           isActive={TabContent === "components"}
           onSelect={() => handleSelect("components")}
         >
           Comonents
         </TabButton>
         <TabButton
-          isActive={TabContent === "jsx"}
+        buttonContainer="li"
+          isActive={TabContent === "jsx"} 
           onSelect={() => handleSelect("jsx")}
         >
           JSX
         </TabButton>
         <TabButton
+         buttonContainer="li"
           isActive={TabContent === "props"}
           onSelect={() => handleSelect("props")}
         >
           Pops
         </TabButton>
         <TabButton
+        buttonContainer="li"
           isActive={TabContent === "state"}
           onSelect={() => handleSelect("state")}
         >
           State
         </TabButton>
+        
       </menu>
+      {!TabContent ? (
+        <p>Select an example</p>
+      ) : (
+        <div id="tab-content">
+          <h3>{EXAMPLES[TabContent].title}</h3>
+          <p>{EXAMPLES[TabContent].description}</p>
+          <pre>
+            <code>{EXAMPLES[TabContent].code}</code>
+          </pre>
+        </div>
+      )} </>
     }/>
   
-  
-      
-    {!TabContent ? (
-          <p>Select an example</p>
-        ) : (
-          <div id="tab-content">
-            <h3>{EXAMPLES[TabContent].title}</h3>
-            <p>{EXAMPLES[TabContent].description}</p>
-            <pre>
-              <code>{EXAMPLES[TabContent].code}</code>
-            </pre>
-          </div>
-        )} 
+    
     </>
   )
 }

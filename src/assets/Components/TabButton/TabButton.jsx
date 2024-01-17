@@ -1,10 +1,10 @@
 import React from "react";
-const TabButton = ( {children,onSelect,isActive}) => {
-
+const TabButton = ( {children,onSelect,isActive,buttonContainer}) => {
+const ButtonContainer=buttonContainer;
   return (
-    <li>
+    <ButtonContainer>
       <button  className={isActive ? "active" : undefined} onClick={onSelect}>{children}</button>
-    </li>
+    </ButtonContainer>
   );
 };
 
